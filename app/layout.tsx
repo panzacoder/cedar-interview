@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="grid h-screen grid-cols-1 grid-rows-[auto_1fr]">
         <Header />
         {children}
       </body>

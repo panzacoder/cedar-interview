@@ -26,7 +26,7 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --accent: hsl(210 40% 96.1%);
-    --accent: rgba(19, 18, 108, 1);
+    --accent-foreground: rgba(19, 18, 108, 1);
 
     --destructive-foreground: rgba(195, 70, 72, 1);
 
