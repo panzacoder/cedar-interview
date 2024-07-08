@@ -14,7 +14,6 @@ export default function PaymentPage() {
   const [paymentInfo, setPaymentInfo] = useState<PaymentFormSchema>()
 
   function handleSuccessfulSubmission(formData: PaymentFormSchema) {
-    console.log(formData)
     setStep('2')
     setPaymentInfo(formData)
   }
