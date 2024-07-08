@@ -32,7 +32,7 @@ export function PaymentForm({
 }) {
   const form = useForm<PaymentFormSchema>({
     resolver: zodResolver(formSchema),
-    shouldUseNativeValidation: true,
+    shouldUseNativeValidation: false,
     defaultValues: {
       cardNumber: '',
       expiry: '',
