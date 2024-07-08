@@ -1,5 +1,5 @@
 import { Button } from '@/components/button'
-import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   const heading = 'Hi, Taylor'
@@ -23,7 +23,9 @@ export default function Home() {
               {totalDue}
             </p>
           </div>
-          <Button>Pay total</Button>
+          <Link href="/payment">
+            <Button>Pay total</Button>
+          </Link>
         </div>
       </div>
     </main>
