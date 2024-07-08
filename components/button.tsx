@@ -1,6 +1,6 @@
 type ButtonProps = {
   children: React.ReactNode
-} & React.HTMLAttributes<HTMLButtonElement>
+} & React.ButtonHTMLAttributes<HTMLButtonElement>
 export function Button({ children, ...rest }: ButtonProps) {
   return (
     <button

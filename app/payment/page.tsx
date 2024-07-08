@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/accordion'
+import { PaymentForm } from './payment-form'
 
 export default function PaymentPage() {
   return (
@@ -12,7 +13,9 @@ export default function PaymentPage() {
         <Accordion type="single" collapsible defaultValue="1">
           <AccordionItem value="1">
             <AccordionTrigger>1 Payment information</AccordionTrigger>
-            <AccordionContent></AccordionContent>
+            <AccordionContent>
+              <PaymentForm />
+            </AccordionContent>
           </AccordionItem>
           <AccordionItem value="2" className="sm:border-none">
             <AccordionTrigger className="">2 Review and pay</AccordionTrigger>
