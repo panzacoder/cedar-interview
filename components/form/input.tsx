@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils'
 import { CheckIcon, AlertCircle } from 'lucide-react'
-import { forwardRef } from 'react'
 import { FieldValue, FieldValues, useController } from 'react-hook-form'
 
 type InputProps<T extends FieldValues> = {
