@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { Button } from '@/components/button'
+import { within, userEvent, expect } from '@storybook/test'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -22,10 +23,25 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {}
+export const Primary: Story = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+    await expect(args.onClick).toHaveBeenCalled()
+  }
+}
 
 export const Disabled: Story = {
   args: {
     disabled: true
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+    await expect(args.onClick).not.toHaveBeenCalled()
   }
 }
